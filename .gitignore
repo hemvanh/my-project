@@ -1,0 +1,121 @@
+# This .gitignore file is for Unity projects.
+#
+# Line endings:
+#   Windows: CR LF
+#   macOS: LF
+#   Linux: LF
+
+# ==============================================================================
+# Unity generated files
+# = ==============================================================================
+# Cache files for the client
+Library/
+# Temporary files such as script recompile
+Temp/
+# Build files created by Unity
+Builds/
+# Logs
+Logs/
+# Crash Reports
+CrashReports/
+# Asset meta files stored in the same folder as their assets.
+# This ensures that meta files are handled consistently by Git.
+#
+# It is important to remember that meta files are required for Unity to track
+# assets. They contain crucial information like GUIDs and import settings.
+# Generally, you *should* commit meta files alongside their corresponding assets.
+# This section is commented out to reflect the common practice of committing
+# .meta files. Uncomment specific lines if you have a strong reason to ignore
+# them (e.g., auto-generated meta files for external tools that are
+# regenerated often and don't contain critical data).
+#
+#*.meta
+
+# ==============================================================================
+# Assets and Scenes
+# ==============================================================================
+# For scenes and prefabs, it's recommended to force text serialization in Unity
+# (Edit > Project Settings > Editor > Asset Serialization > Mode: Force Text).
+# This makes diffs human-readable and merges easier.
+# Forcing text serialization for .unity and .prefab files is typically done
+# via .gitattributes, not .gitignore.
+
+# ==============================================================================
+# Packages
+# ==============================================================================
+# When using Unity Package Manager, 'Packages/manifest.json' and 'Packages/packages-lock.json'
+# should generally be committed to source control to track dependencies.
+# Uncomment if you want to ignore them for specific reasons.
+# Packages/manifest.json
+# Packages/packages-lock.json
+
+# ==============================================================================
+# User-specific / Local settings (should not be shared)
+# ==============================================================================
+UserSettings/
+
+# ==============================================================================
+# Visual Studio / Rider / IDE generated files
+# ==============================================================================
+# Visual Studio cache directory
+.vs/
+# Visual Studio user-specific files
+*.user
+# Visual Studio project files (if not part of the main solution)
+*.csproj
+*.unityproj
+*.sln*
+# Rider specific files
+*.csproj.DotSettings
+*.csproj.DotSettings.user
+*.pidb
+*.suo
+# Mac / Linux editor generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+__MACOSX
+ehthumbs.db
+Thumbs.db
+[Tt]humbs.db
+
+# ==============================================================================
+# Build related files
+# ==============================================================================
+# Windows
+*.exe
+*.dll
+*.pdb
+# macOS
+*.app
+*.bundle
+*.app.dSYM
+# Linux
+*.x86_64
+*.x86
+# WebGL
+WebGL/
+# Android
+*.apk
+*.aab
+# iOS
+.xcarchive/
+# Unity-specific build artifacts
+*.unitypackage
+ExportedObj/
+
+# ==============================================================================
+# External Assets (if not managed by Package Manager or explicitly tracked)
+# ==============================================================================
+# Some externally imported assets might generate large files or have their own
+# version control needs. Add them here if necessary.
+# e.g., FMOD/
+# e.g., Wwise/
+
+# ==============================================================================
+# Custom folder (when created by user/developer)
+# ==============================================================================
+# Example: If you have a custom 'Export' folder for game builds
+# Export/
