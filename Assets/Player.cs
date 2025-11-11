@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -6,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public string playerName = "Hero";
     private Rigidbody2D rb;
+    private Animator anim;
 
     [SerializeField] private float moveSpeed = 3.5f;
     [SerializeField] private float jumpForce = 7.0f;
@@ -14,6 +16,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
     }
     void Start()
     {
@@ -25,6 +28,13 @@ public class Player : MonoBehaviour
     {
         HandleInput();
         HandleMovement();
+        HandleAnimations();
+    }
+
+    private void HandleAnimations()
+    {
+        bool isMoving = rb.linearVelocityX != 0;
+        anim.SetBool("isMoving", isMoving);
     }
 
     private void HandleInput()
